@@ -93,3 +93,15 @@ const christy: CatDog = {
   breed: "asdasd",
   age: 123,
 };
+
+function printAge(age: number | string): void {
+  console.log(`You are ${age} years old`);
+}
+
+function calculateTax(price: number | string, tax: number) {
+  if (typeof price === "string") {
+    price = parseFloat(price.replace("$", ""));
+  }
+
+  return price * tax;
+}
