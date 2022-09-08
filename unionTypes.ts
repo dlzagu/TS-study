@@ -57,4 +57,39 @@ type DayOfWeek =
   | "Saturday"
   | "Sunday";
 
-let today: DayOfWeek = "weds";
+// let today: DayOfWeek = "weds";
+
+//exercise
+
+type SkillLevel = "Beginner" | "Intermediate" | "Advanced" | "Expert";
+
+type SkiSchoolStudent = {
+  name: string;
+  age: number;
+  sport: "ski" | "snowboard";
+  level: SkillLevel;
+};
+
+type RGB = {
+  r: number;
+  g: number;
+  b: number;
+};
+
+type HSL = {
+  h: number;
+  s: number;
+  l: number;
+};
+
+const colors: (RGB | HSL)[] = [];
+
+const greet = (person: string | string[]): void => {
+  if (typeof person === "string") {
+    console.log(`Hello,${person}`);
+  } else {
+    for (let p of person) {
+      console.log(`Hello,${p}`);
+    }
+  }
+};
