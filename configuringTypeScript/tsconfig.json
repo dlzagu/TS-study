@@ -100,5 +100,8 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "files": ["farmstand.ts", "index.ts"] // 두개만 컴파일
+  // "files": ["src/farmstand.ts", "index.ts"] // 두개만 컴파일 files 선언할 경우 include는 안됨
+  // include의 기본값은 모든 파일
+  "include": ["src"],
+  "exclude": ["src/dontTouch.ts"] // dontTouch.ts을 제외하고 컴파일
 }
